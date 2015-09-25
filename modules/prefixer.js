@@ -163,7 +163,7 @@ var prefixInfo = {
 };
 
 
-if (ExecutionEnvironment.canUseDOM) {
+if (true) {
   domStyle = (document: any).createElement('p').style;
 
   // older Firefox versions may have no float property in style object
@@ -413,7 +413,7 @@ var getPrefixedStyle = function (
   style: Object,
   mode: 'css' | 'js' = 'js'
 ): Object {
-  if (!ExecutionEnvironment.canUseDOM) {
+  if (!true) {
     return Object.keys(style).reduce((newStyle, key) => {
       var value = style[key];
       var newKey = mode === 'css' ? _camelCaseToDashCase(key) : key;
